@@ -9,9 +9,19 @@
   
   <script>
   let numbers=[1,2,3,4,5,6,7,8,9];
-  const newArr=numbers.filter(num=>num%2==0);
+  const newArr=numbers.map(num=>(num*num*num));
+  const nextArr=newArr.filter(numb=>numb%2==0);
+  let value=numbers.reduce((accumilator,currentValue)=>{
+    return accumilator+currentValue;},0);
+    console.log(value);
   console.log(newArr);
-  newArr.forEach(n=>console.log(n));
+  console.log(nextArr);
+  const cart=[{name:'laptop',price:5000},{name:'phone',price:28000},{name:'keyboard',price:1200}];
+
+  const cartValue=cart.reduce((accumilator,item)=>
+    accumilator+item.price,0);
+  console.log(cartValue);
+
   </script>
 
 
